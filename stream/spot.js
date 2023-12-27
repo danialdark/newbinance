@@ -66,5 +66,5 @@ const startSpotStream = async (symbol) => {
 
 
 
-startSpotStream(["BTCUSDT"])
+startSpotStream("BTCUSDT")
 // module.exports = connectToBinance;
