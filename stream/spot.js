@@ -3,12 +3,15 @@ const Redis = require('ioredis');
 const axios = require('axios');
 
 
+
 const redis = new Redis({
-    host: 'localhost',
+    host: '65.109.183.146',
     port: '6379',
-    password: '',
+    password: 'D@n!@l12098',
     enableCompression: true,
 });
+
+
 
 
 
