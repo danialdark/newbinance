@@ -1,0 +1,16 @@
+{
+  "name": "newbinance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.3",
+    "ioredis": "^5.3.2",
+    "ws": "^8.16.0"
+  }
+}
