@@ -57,6 +57,8 @@ const startSpotStream = async (symbol) => {
 
         const parsedObj = JSON.parse(tradeData);
         const klineData = parsedObj.k;
+        console.log(klineData)
+
         if (+klineData.l > 0) {
             const newCandle = {
                 t: +klineData.t,
@@ -68,7 +70,6 @@ const startSpotStream = async (symbol) => {
                 v: +klineData.v
             };
 
-            console.log(newCandle)
 
             // Save filteredData to Redis
             // redis.pipeline().set(`${symbol}`, JSON.stringify(filteredData)).exec();
