@@ -13,39 +13,10 @@ const redis = new Redis({
 
 
 
-
-
-const connectToBinance = async (symbol, index = 0) => {
-    var onsStream = symbol;
-    if (Array.isArray(symbol)) {
-        onsStream = symbol[index];
-        index++
-    }
-
-    console.log(`***start getting stream for ${onsStream}***`);
-
-    const result = await startSpotStream(onsStream.toLowerCase());
-
-    if (Array.isArray(symbol)) {
-        if (symbol.length - 1 >= index) {
-            if (result) {
-                connectToBinance(symbol, index)
-                console.log(`******************** done conntecting to binance stream  for ${onsStream} **************************`);
-            }
-        }
-    } else {
-        if (result) {
-            console.log(`********************  done conntecting to binance stream  for ${onsStream} **************************`);
-        }
-    }
-}
-
-
-
 const startSpotStream = async (symbol) => {
 
 
-    const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol}@kline_1m`);
+    const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@kline_${timeFrame}`);
 
 
     ws.on('open', () => {
