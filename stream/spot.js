@@ -28,7 +28,6 @@ const startSpotStream = async (symbol) => {
 
         const parsedObj = JSON.parse(tradeData);
         const klineData = parsedObj.k;
-        console.log(klineData)
 
         if (+klineData.l > 0) {
             const newCandle = {
@@ -40,6 +39,8 @@ const startSpotStream = async (symbol) => {
                 o: +klineData.o,
                 v: +klineData.v
             };
+
+            console.log(newCandle)
 
 
             // Save filteredData to Redis
