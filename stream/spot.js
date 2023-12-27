@@ -50,7 +50,6 @@ const startSpotStream = async (symbol) => {
 
     ws.on('open', () => {
         console.log(`Connected to Binance 1m WebSocket.`);
-        resolve();
     });
 
     ws.on('message', async (data) => {
