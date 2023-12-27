@@ -5,7 +5,7 @@ const axios = require('axios');
 
 
 const redis = new Redis({
-    host: '65.109.183.146',
+    host: '91.107.160.210',
     port: '6379',
     password: 'D@n!@l12098',
     enableCompression: true,
