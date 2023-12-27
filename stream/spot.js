@@ -16,7 +16,7 @@ const redis = new Redis({
 const startSpotStream = async (symbol) => {
 
 
-    const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@kline_${timeFrame}`);
+    const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@kline_1m`);
 
 
     ws.on('open', () => {
